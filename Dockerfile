@@ -3,7 +3,7 @@ USER root
 
 RUN apt-get update \
 &&apt-get update -y \
-&&apt-get install -y gimp gedit flatpak
+&&apt-get install -y gimp gedit flatpak file-roller vlc 
 
 
 
