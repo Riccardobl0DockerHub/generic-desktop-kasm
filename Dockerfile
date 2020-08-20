@@ -9,6 +9,7 @@ RUN wget "https://discord.com/api/download?platform=linux&format=deb" -O /tmp/di
 && apt install -y /tmp/discord.deb \
 && rm /tmp/discord.deb
 
+RUN apt-get -y install snapd
 RUN snap install telegram-desktop
 RUN snap install whatsdesk
 
