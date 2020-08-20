@@ -9,9 +9,8 @@ RUN wget "https://discord.com/api/download?platform=linux&format=deb" -O /tmp/di
 && apt install -y /tmp/discord.deb \
 && rm /tmp/discord.deb
 
-RUN apt-get -y install snapd
-RUN snap install telegram-desktop
-RUN snap install whatsdesk
+RUN wget -O- https://telegram.org/dl/desktop/linux | tar xJ -C /opt/ \
+&&ln -s /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
 
 
 USER 1000
