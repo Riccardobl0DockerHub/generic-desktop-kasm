@@ -6,7 +6,7 @@ RUN apt-get update \
 &&apt-get install -y gimp gedit file-roller vlc wget 
 
 RUN wget "https://discord.com/api/download?platform=linux&format=deb" -O /tmp/discord.deb \
-&& dpkg -i /tmp/discord.deb \
+&& apt install -y /tmp/discord.deb \
 && rm /tmp/discord.deb
 
 RUN snap install telegram-desktop
